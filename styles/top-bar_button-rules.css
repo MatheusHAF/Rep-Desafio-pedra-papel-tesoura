@@ -1,0 +1,65 @@
+body{
+    height: 100vh;
+    background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    font-family: "Barlow Semi Condensed", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.top-bar{
+    width: 40vw;
+    height: 15vh;
+    background-color:transparent;
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 15px;
+    padding: 15px;
+}
+.top-bar__text{
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+}
+.top-bar__text p{
+    margin: 0;
+}
+.top-bar__score{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 30px;
+    
+}
+.top-bar__score .text{
+    text-align: center;
+    color: hsl(229, 64%, 46%);
+    font-size: 14px;
+    font-weight:400;
+    margin: 0;
+}
+.top-bar__score .points{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: hsl(229, 25%, 31%);
+    font-size: 50px;
+    font-weight: 600;
+}
+.rules{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    margin: 0 30px 20px 0;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+}
+.rules .rules-button{
+    padding: 5px 20px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+}
