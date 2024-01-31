@@ -1,13 +1,13 @@
 .container-game{
     background-image: url(../rock-paper-scissors-master/images/bg-triangle.svg);
     background-size: cover;
-    height: 50vh;
-    border: 5px solid white;
+    height: 60vh;
+    width: 30vw;
+    border: 1px solid white;
     display: grid;
-    align-items: ;
     grid-template-columns: repeat(2, 1fr); /* Duas colunas com larguras iguais */
-    grid-template-rows: repeat(2, 50%); /* Duas linhas com alturas iguais de 100 pixels */
-    width: 80vw;
+    grid-template-rows: repeat(2, 30%); /* Duas linhas com alturas iguais de 100 pixels */
+    
 }
 .container-game button{
     background-color: transparent;
