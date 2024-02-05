@@ -1,14 +1,58 @@
 .container-game{
-    background-image: url(../rock-paper-scissors-master/images/bg-triangle.svg);
     background-size: cover;
-    height: 60vh;
-    width: 30vw;
-    border: 1px solid white;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas com larguras iguais */
-    grid-template-rows: repeat(2, 30%); /* Duas linhas com alturas iguais de 100 pixels */
-    
+    background-image: url('../rock-paper-scissors-master/images/bg-triangle.svg');
+    width: 313px;
+    height: 278px;
+    margin: 8% auto;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.container-game button{
-    background-color: transparent;
+.container-game .btns-top{
+    display: flex;
+    width: 100%;
+    height: 33%;
+    justify-content: space-between;
+}
+.container-game .btns-bottom{
+    display: flex;
+    width: 100%;
+    height: 67%;
+    align-items: end;
+    justify-content: center;
+    transform: translate(0,5%);
+}
+.container-game .btns-top button, .container-game .btns-bottom button{
+    height: 78px;
+    background-color: white;
+    border: none;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0 15px;
+}
+button:hover{
+    cursor: pointer;
+}
+button#pap-btn{
+
+    border: 10px solid rgb(75, 75, 247);
+}
+button#ped-btn{
+    border: 8px solid red;
+}
+button#tes-btn{
+    border: 8px solid rgb(248, 161, 30);
+}
+.attribution{
+    position: absolute;
+    display:flex;
+    bottom: 0;
+    width: 100%;
+}
+.attribution p{
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+}
+.attribution p a{
+    color: rgb(146, 146, 146);
 }
