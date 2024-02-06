@@ -12,6 +12,7 @@
     width: 100%;
     height: 33%;
     justify-content: space-between;
+    transform: translate(0,-30%);
 }
 .container-game .btns-bottom{
     display: flex;
@@ -19,10 +20,11 @@
     height: 67%;
     align-items: end;
     justify-content: center;
-    transform: translate(0,5%);
+    transform: translate(0,10%);
 }
 .container-game .btns-top button, .container-game .btns-bottom button{
-    height: 78px;
+    height: 100px;
+    width: 100px;
     background-color: white;
     border: none;
     text-align: center;
