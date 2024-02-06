@@ -71,6 +71,5 @@ body{
 }
 .container-rules{
     background-color: rgb(255, 255, 255);
-    position: fixed;
     /*display: none;*/
 }

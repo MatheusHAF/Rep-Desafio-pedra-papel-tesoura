@@ -10,6 +10,12 @@ function choice_comp(){
         return 'tesoura';
     }
 }
+function countscore() {
+    var scorehtml = document.querySelector('.points');
+    var scorepoints = Number.parseInt(scorehtml)
+    scorehtml.innerText = scorepoints+1;
+    
+}
 function play(user_btn){
     const choice_pc = choice_comp()
     alert('PC ESCOLHEU '+ choice_pc);
@@ -26,10 +32,12 @@ function play(user_btn){
         alert('PC ganhou');   
     }
     else if (user_btn === 'papel' && choice_pc === 'pedra') {
-        alert('VOCÊ ganhou');   
+        alert('VOCÊ ganhou');
+        countscore();   
     }
     else if (user_btn === 'tesoura' && choice_pc === 'papel') {
-        alert('VOCÊ ganhou');   
+        alert('VOCÊ ganhou');
+        countscore();   
     }
     else if (user_btn === 'tesoura' && choice_pc === 'pedra') {
         alert('PC ganhou');   
@@ -38,18 +46,20 @@ function play(user_btn){
         alert('PC ganhou');   
     }
     else if (user_btn === 'pedra' && choice_pc === 'tesoura') {
-        alert('VOCÊ ganhou');   
+        alert('VOCÊ ganhou');
+        countscore();   
     }
 }
 
 function showhide(){
-    const container_rules = document.getElementsByClassName('container-rules');
-    
-    Array.from(container_rules).forEach((x)=>{
-        if ( x.style.display === "none") {
-            x.style.display = "block"
-        }else{
-            x.style.display = "none"
-        }
-    });
+    Swal.fire({
+        title: "REGRAS",
+        imageUrl: "./rock-paper-scissors-master/images/image-rules.svg",
+        imageWidth: 304,
+        imageHeight: 270,
+        showCloseButton: true,
+        showCancelButton: false,
+        showConfirmButton: false,
+        imageAlt: "Imagem Regras"
+      });
 };
