@@ -41,3 +41,15 @@ function play(user_btn){
         alert('VOCÊ ganhou');   
     }
 }
+
+function showhide(){
+    const container_rules = document.getElementsByClassName('container-rules');
+    
+    Array.from(container_rules).forEach((x)=>{
+        if ( x.style.display === "none") {
+            x.style.display = "block"
+        }else{
+            x.style.display = "none"
+        }
+    });
+};

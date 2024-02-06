@@ -69,3 +69,8 @@ body{
     cursor: pointer;
     background-color: hsla(217, 16%, 45%, 0.226);
 }
+.container-rules{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    /*display: none;*/
+}
