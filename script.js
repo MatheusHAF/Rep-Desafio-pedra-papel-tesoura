@@ -31,44 +31,42 @@ function zerascore() {
     scoreElement.innerText = '00';
 }
 
-
 //Função que compara a jogada do jogador e da máquina
 function play(user_btn){
-    //const choice_pc = choice_comp()
-    const choice_pc = 'pedra';
+    const choice_pc = choice_comp()
 
     //alert('PC ESCOLHEU '+ choice_pc);
     if (user_btn === 'papel' && choice_pc === 'papel') {
-         alert('Empate');   
+        mudamainescolha(user_btn,choice_pc);   
     }
     else if (user_btn === 'tesoura' && choice_pc === 'tesoura') {
-        alert('Empate');   
+        mudamainescolha(user_btn,choice_pc);   
     }
     else if (user_btn === 'pedra' && choice_pc === 'pedra') {
-        alert('Empate');   
+        mudamainescolha(user_btn,choice_pc); 
     }
     else if (user_btn === 'papel' && choice_pc === 'tesoura') {
-        alert('PC ganhou');  
+        mudamainescolha(user_btn,choice_pc); 
         zerascore(); 
     }
     else if (user_btn === 'papel' && choice_pc === 'pedra') {
-        alert('VOCÊ ganhou');
+        mudamainescolha(user_btn,choice_pc);
         countscore();   
     }
     else if (user_btn === 'tesoura' && choice_pc === 'papel') {
-        alert('VOCÊ ganhou');
+        mudamainescolha(user_btn,choice_pc);
         countscore();   
     }
     else if (user_btn === 'tesoura' && choice_pc === 'pedra') {
-        alert('PC ganhou');
+        mudamainescolha(user_btn,choice_pc);
         zerascore();   
     }
     else if (user_btn === 'pedra' && choice_pc === 'papel') {
-        alert('PC ganhou');
+        mudamainescolha(user_btn,choice_pc);
         zerascore();   
     }
     else if (user_btn === 'pedra' && choice_pc === 'tesoura') {
-        alert('VOCÊ ganhou');
+        mudamainescolha(user_btn,choice_pc);
         countscore();   
     }
 }
@@ -86,3 +84,17 @@ function showhide(){
         imageAlt: "Imagem Regras"
       });
 };
+
+function mudamainescolha(user,pc){
+    const primeiro_container = document.getElementsByClassName('.container-game');
+    const segundo_container = document.getElementsByClassName('.container-game_choice');
+    const terceiro_container = document.getElementsByClassName('.container-game_final');
+    
+    primeiro_container.style.display = 'none';
+    segundo_container.style.display = 'block';
+
+    setTimeout(function(){
+        segundo_container.style.display = 'none';
+        terceiro_container.style.display = 'block';
+    },2000)
+}
