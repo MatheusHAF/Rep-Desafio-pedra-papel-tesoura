@@ -1,18 +1,25 @@
+.container-game, .container-game_choice,.container-game_final{
+    width: 70%;
+    height: 70%;
+    max-width: 700px;
+    margin: 8% auto;
+    justify-content: space-between;
+}
 .container-game{
-    background-size: cover;
-    background-image: url('../rock-paper-scissors-master/images/bg-triangle.svg');
+    margin-top: 10vh;
     width: 313px;
     height: 278px;
-    margin: 8% auto;
+    background-size: cover;
+    background-image: url('../rock-paper-scissors-master/images/bg-triangle.svg');
+    
     flex-direction: row;
-    justify-content: space-between;
 }
 .container-game .btns-top{
     display: flex;
     width: 100%;
     height: 33%;
     justify-content: space-between;
-    transform: translate(0,-30%);
+    transform: translate(0,-60%);
 }
 .container-game .btns-bottom{
     display: flex;
@@ -23,13 +30,48 @@
     transform: translate(0,10%);
 }
 .container-game .btns-top button, .container-game .btns-bottom button{
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 130px;
     background-color: white;
     border: none;
     text-align: center;
     border-radius: 50%;
     font-size: 10px;
+}
+.container-game_choice{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-weight: 500;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+.container-game_choice button,.container-game_final button{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: none;
+    margin-top: 10vh;
+}
+.container-game_choice .btn-empty{
+    background-color: rgba(24, 27, 63, 0.377);
+}
+.container-game_final{
+    border: 1px solid white;
+    display: flex;
+    color: white;
+    font-weight: 500;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+.container-game_final .middle button{
+    margin-top: 10px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
 }
 button:hover{
     cursor: pointer;
