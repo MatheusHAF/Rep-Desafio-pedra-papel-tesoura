@@ -86,15 +86,14 @@ function showhide(){
 };
 
 function mudamainescolha(user,pc){
-    const primeiro_container = document.getElementsByClassName('.container-game');
-    const segundo_container = document.getElementsByClassName('.container-game_choice');
-    const terceiro_container = document.getElementsByClassName('.container-game_final');
+    //alert(`user: ${user} pc: ${pc}`)
+    var primeiro_container = document.getElementById('cont-1');
+    var segundo_container = document.getElementById('cont-2');
+    var terceiro_container = document.getElementById('cont-3');
     
-    primeiro_container.style.display = 'none';
-    segundo_container.style.display = 'block';
-
-    setTimeout(function(){
-        segundo_container.style.display = 'none';
-        terceiro_container.style.display = 'block';
-    },2000)
+    alert(primeiro_container)
+    
+    if(primeiro_container.style.display === 'block'){
+        alert('block mudar para none')
+    }
 }
