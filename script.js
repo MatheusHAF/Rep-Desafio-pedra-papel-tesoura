@@ -86,14 +86,7 @@ function showhide(){
 };
 
 function mudamainescolha(user,pc){
-    //alert(`user: ${user} pc: ${pc}`)
-    var primeiro_container = document.getElementById('cont-1');
-    var segundo_container = document.getElementById('cont-2');
-    var terceiro_container = document.getElementById('cont-3');
-    
-    alert(primeiro_container)
-    
-    if(primeiro_container.style.display === 'block'){
-        alert('block mudar para none')
-    }
+    document.getElementById('cont-1').style.display = 'none';
+    document.getElementById('cont-2').style.display = 'block';
+    document.getElementById('cont-3').style.display = 'block';
 }
