@@ -62,7 +62,6 @@
     background-color: rgba(24, 27, 63, 0.377);
 }
 .container-game_final{
-    border: 1px solid white;
     display: none;
     color: white;
     font-weight: 500;
@@ -76,18 +75,31 @@
     font-size: 12px;
     font-weight: 500;
 }
-button:hover{
-    cursor: pointer;
-}
 button#pap-btn{
-
-    border: 10px solid rgb(75, 75, 247);
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 15px solid rgb(75, 75, 247);
+    box-shadow: 0 0 30px rgb(0, 0, 0),inset 0 0 10px rgb(0, 0, 0);
+    transition: box-shadow 0.3s ease;
 }
 button#ped-btn{
-    border: 8px solid red;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 15px solid red;
+    box-shadow: 0 0 30px rgb(0, 0, 0),inset 0 0 10px rgb(0, 0, 0);
 }
 button#tes-btn{
-    border: 8px solid rgb(248, 161, 30);
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 15px solid rgb(248, 161, 30);
+    box-shadow: 0 0 30px rgb(0, 0, 0),inset 0 0 10px rgb(0, 0, 0);
+}
+button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.205);
 }
 .attribution{
     position: absolute;

@@ -29,7 +29,7 @@
     <main>
         <div id="cont-1" class="container-game">
             <div class="btns-top">
-                <button id="pap-btn" onclick="play('papel')"><img src="./rock-paper-scissors-master/images/icon-paper.svg" alt="icone papel"></button>
+                <button id="pap-btn" onclick="play('papel')"><img src="./rock-paper-scissors-master/images/icon-paper.svg" alt="icone tesoura"></button>
                 <button id="tes-btn" onclick="play('tesoura')"><img src="./rock-paper-scissors-master/images/icon-scissors.svg" alt="icone tesoura"></button>
             </div>
             <div class="btns-bottom">
@@ -39,32 +39,32 @@
         <div id="cont-2" class="container-game_choice">
             <div class="btns-picked_player">
                 <p>YOU PICKED</p>
-                <button id="">
-                    <img src="./rock-paper-scissors-master/images/icon-paper.svg" alt="icone papel">
+                <button id="pl-ch">
+                    <img id="img-pl" src="" alt="icone papel">
                 </button> 
             </div>
             <div class="btns-picked_computer">
                 <p>THE HOUSE PICKED</p>
-                <button class="btn-empty">
-                    
+                <button id="hs-ch" class="btn-empty">
+                    <img id="img-hs" src="" alt="">
                 </button> 
             </div>
         </div>
         <div id="cont-3" class="container-game_final">
             <div class="picked_player">
                 <p>YOU PICKED</p>
-                <button id="">
-                    <img src="./rock-paper-scissors-master/images/icon-paper.svg" alt="icone papel">
+                <button id="pk-pl-btn">
+                    <img id="pk-pl-img" src="./rock-paper-scissors-master/images/icon-paper.svg" alt="icone papel">
                 </button> 
             </div>
             <div class="middle">
-                <p>RESULTADO</p>
-                <button>PLAY AGAIN</button>
+                <p id="result">RESULTADO</p>
+                <button onclick="playagain()">PLAY AGAIN</button>
             </div> 
             <div class="picked_computer">
                 <p>THE HOUSE PICKED</p>
-                <button id="">
-                    <img src="./rock-paper-scissors-master/images/icon-paper.svg" alt="icone papel">
+                <button id="pk-hs-btn">
+                    <img id="pk-hs-img" src="./rock-paper-scissors-master/images/icon-paper.svg" alt="icone papel">
                 </button> 
             </div>  
         </div>
