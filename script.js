@@ -86,7 +86,14 @@ function showhide(){
 };
 
 function mudamainescolha(user,pc){
+    //desaparecer a primeira div
     document.getElementById('cont-1').style.display = 'none';
+    
+    //alterar button das divs
+
+    //mostrar div
     document.getElementById('cont-2').style.display = 'flex';
+    
+    //timezinho de uns 3s e mostrar a proxima div
     //document.getElementById('cont-3').style.display = 'block';
 }

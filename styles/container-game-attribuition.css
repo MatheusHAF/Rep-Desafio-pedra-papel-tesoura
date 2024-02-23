@@ -49,7 +49,6 @@
     display: none;
 }
 .container-game_choice div{
-    background-color: red;
     width: 50%;
 }
 .container-game_choice button,.container-game_final button{
