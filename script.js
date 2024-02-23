@@ -87,6 +87,6 @@ function showhide(){
 
 function mudamainescolha(user,pc){
     document.getElementById('cont-1').style.display = 'none';
-    document.getElementById('cont-2').style.display = 'block';
-    document.getElementById('cont-3').style.display = 'block';
+    document.getElementById('cont-2').style.display = 'flex';
+    //document.getElementById('cont-3').style.display = 'block';
 }
