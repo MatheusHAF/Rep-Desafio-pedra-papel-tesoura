@@ -33,40 +33,49 @@ function zerascore() {
 
 //Função que compara a jogada do jogador e da máquina
 function play(user_btn){
-    const choice_pc = choice_comp()
-
+    const choice_pc = choice_comp();
+    var result; //0 = perdeu, 1 = ganhou, 2 = empate
     //alert('PC ESCOLHEU '+ choice_pc);
     if (user_btn === 'papel' && choice_pc === 'papel') {
-        mudamainescolha(user_btn,choice_pc);   
+        result = 2;
+        mudamainescolha(user_btn,choice_pc,result);   
     }
     else if (user_btn === 'tesoura' && choice_pc === 'tesoura') {
-        mudamainescolha(user_btn,choice_pc);   
+        result = 2;
+        mudamainescolha(user_btn,choice_pc,result);   
     }
     else if (user_btn === 'pedra' && choice_pc === 'pedra') {
-        mudamainescolha(user_btn,choice_pc); 
+        result = 2;
+        mudamainescolha(user_btn,choice_pc,result); 
     }
     else if (user_btn === 'papel' && choice_pc === 'tesoura') {
-        mudamainescolha(user_btn,choice_pc); 
+        result = 0;
+        mudamainescolha(user_btn,choice_pc,result);
         zerascore(); 
     }
     else if (user_btn === 'papel' && choice_pc === 'pedra') {
-        mudamainescolha(user_btn,choice_pc);
+        result = 1;
+        mudamainescolha(user_btn,choice_pc,result);
         countscore();   
     }
     else if (user_btn === 'tesoura' && choice_pc === 'papel') {
-        mudamainescolha(user_btn,choice_pc);
+        result = 1;
+        mudamainescolha(user_btn,choice_pc,result);
         countscore();   
     }
     else if (user_btn === 'tesoura' && choice_pc === 'pedra') {
-        mudamainescolha(user_btn,choice_pc);
+        result = 0;
+        mudamainescolha(user_btn,choice_pc,result);
         zerascore();   
     }
     else if (user_btn === 'pedra' && choice_pc === 'papel') {
-        mudamainescolha(user_btn,choice_pc);
+        result = 0;
+        mudamainescolha(user_btn,choice_pc,result);
         zerascore();   
     }
     else if (user_btn === 'pedra' && choice_pc === 'tesoura') {
-        mudamainescolha(user_btn,choice_pc);
+        result = 1;
+        mudamainescolha(user_btn,choice_pc,result);
         countscore();   
     }
 }
@@ -85,23 +94,35 @@ function showhide(){
       });
 };
 
-function mudamainescolha(user,pc){
+function mudamainescolha(user,pc,res){
     //desaparecer a primeira div
     document.getElementById('cont-1').style.display = 'none';
     
     //alterar button e imgs das divs
-    var botao_player = document.getElementById("pl-ch");
-    var botao_house = document.getElementById("hs-ch");
+    var botao_player = document.getElementsByClassName("pl-ch");
+    var botao_house = document.getElementsByClassName("hs-ch");
 
     var img_player = document.getElementById("img-pl");
     var img_house = document.getElementById("img-hs");
 
     //arrumar a proxima div
-    var btnplayer = document.getElementById("pk-pl-btn");
-    var btnhouse = document.getElementById("pk-hs-btn");
+    var btnplayer = document.getElementsByClassName("pk-pl-btn");
+    var btnhouse = document.getElementsByClassName("pk-hs-btn");
 
     var imgplayer = document.getElementById("pk-pl-img");
     var imghouse = document.getElementById("pk-hs-img");
+
+    //alterar o resultado
+    var r = document.getElementById("result");
+    if (res == 0) {
+        r.innerText = 'YOU LOST'
+    }
+    else if (res == 1) {
+        r.innerText = 'YOU WIN'
+    }
+    else if (res == 2) {
+        r.innerText = 'DRAW'
+    }
 
     if (user == "papel") {
         botao_player.id = "pap-btn";
