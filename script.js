@@ -125,45 +125,45 @@ function mudamainescolha(user,pc,res){
     }
 
     if (user == "papel") {
-        botao_player.id = "pap-btn";
+        botao_player[0].setAttribute('id','pap-btn');
         img_player.src = "./rock-paper-scissors-master/images/icon-paper.svg";
         //
-        btnplayer.id = "pap-btn";
+        btnplayer[0].setAttribute('id','pap-btn');
         imgplayer.src = "./rock-paper-scissors-master/images/icon-paper.svg";
     }
     else if (user == "tesoura") {
-        botao_player.id = "tes-btn";
+        botao_player[0].setAttribute('id','tes-btn');
         img_player.src = "./rock-paper-scissors-master/images/icon-scissors.svg";
         //
-        btnplayer.id = "tes-btn";
+        btnplayer[0].setAttribute('id','tes-btn');
         imgplayer.src = "./rock-paper-scissors-master/images/icon-scissors.svg";
     }
     else if (user == "pedra") {
-        botao_player.id = "ped-btn";
+        botao_player[0].setAttribute('id','ped-btn');
         img_player.src ="./rock-paper-scissors-master/images/icon-rock.svg";
         //
-        btnplayer.id = "ped-btn";
+        btnplayer[0].setAttribute('id','ped-btn');
         imgplayer.src = "./rock-paper-scissors-master/images/icon-rock.svg";
     }
     if (pc == "papel") {
-        botao_house.id ="pap-btn";
+        botao_house[0].setAttribute('id','pap-btn');
         img_house.src = "./rock-paper-scissors-master/images/icon-paper.svg";
         //
-        btnhouse.id = "pap-btn";
+        btnhouse[0].setAttribute('id','pap-btn');
         imghouse.src = "./rock-paper-scissors-master/images/icon-paper.svg";
     }
     else if(pc == "tesoura"){
-        botao_house.id ="tes-btn";
+        botao_house[0].setAttribute('id','tes-btn');
         img_house.src = "./rock-paper-scissors-master/images/icon-scissors.svg";
         //
-        btnhouse.id = "tes-btn";
+        btnhouse[0].setAttribute('id','tes-btn');
         imghouse.src = "./rock-paper-scissors-master/images/icon-scissors.svg";
     }
     else if(pc == "pedra"){
-        botao_house.id ="ped-btn";
+        botao_house[0].setAttribute('id','ped-btn');
         img_house.src = "./rock-paper-scissors-master/images/icon-rock.svg";
         //
-        btnhouse.id = "ped-btn";
+        btnhouse[0].setAttribute('id','ped-btn');
         imghouse.src = "./rock-paper-scissors-master/images/icon-rock.svg";
     }
     
