@@ -1,5 +1,5 @@
 body{
-    height: 100vh;
+    height: clamp(667px,100vh,1280px);
     background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
     font-family: "Barlow Semi Condensed", sans-serif; 
 }
@@ -8,7 +8,7 @@ body{
     justify-content: center;
 }
 .top-bar{
-    width: 40vw;
+    width: clamp(200px, 80vw, 400px);
     height: 15vh;
     background-color:transparent;
     display: flex;
@@ -16,6 +16,7 @@ body{
     border: 3px solid hsl(217, 16%, 45%);
     border-radius: 15px;
     padding: 15px;
+    margin-top: 10px;
 }
 .top-bar__text{
     color: white;
@@ -27,8 +28,13 @@ body{
 }
 .top-bar__score{
     background-color: white;
+    width: 100px;
+    height: 100px;
     border-radius: 5px;
-    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 .top-bar__score .text{
